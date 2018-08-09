@@ -52,6 +52,7 @@ public class Application implements CommandLineRunner {
         user.setUsername("user");
         user.addAuthority(new User.Authority("authorised"));
         user.setPassword(encoder.encode("passwd"));
+        userDetailsService.addUser(user);
     }
 
 }
